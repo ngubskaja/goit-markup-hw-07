@@ -6,6 +6,7 @@ body {
   color: #212121;
 }
 :root{
+  --logo-color:#000000;
   --main-font: "Roboto";
   --secondary-font: "Raleway";
   --accent-color: #2196F3;
@@ -87,17 +88,17 @@ img {
   text-decoration: none;
 }
 .logo {
-  font-family: Raleway, sans-serif;
+  margin-right: 92px;
+  display: block;
+  font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  margin-right: 92px;
   font-size: 26px;
   line-height: 1.1;
-  color: var(--main-txt-light);
+  letter-spacing: 0.03em;
+  color: var(--logo-color);
 }
-.header__logo {
-  color: var(--accent-color);
-}
+
 
 .header__list{
   display: flex;
@@ -121,6 +122,9 @@ img {
 
   transition: color var(--animation);
 }
+.header__link--active{
+  color: var(--accent-color);
+}
 
 
 .header__link:hover,
@@ -130,7 +134,7 @@ img {
 
 .current{
   position: relative;
-  color:var(--accent-color);
+  
 }
 
 .current::after{
@@ -530,19 +534,19 @@ color: var(--accent-color);
   color: var(--accent-color);
 }
 
-.footer-site__logo-link {
-  display: block;
+
+.footer-site__logo{
   margin-bottom: 20px;
+  color: var(--main-txt-dark);
+}
+
+.logo__accent {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  color:var(--main-txt-dark);
-}
-
-.footer-site__logo {
   color: var(--accent-color);
 }
 
@@ -720,6 +724,13 @@ color: var(--accent-color);
   transition: color  var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
+.portfolio__btn--accent{
+  background-color: var(--accent-color);
+  color: var(--main-txt-dark);
+}
+
+
+
 .portfolio__btn:hover,
 .portfolio__btn:focus {
   box-shadow:  0px 4px 4px rgb(0 0 0 / 25%);
@@ -732,12 +743,13 @@ color: var(--accent-color);
 .portfolio__galery{
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  column-gap: 30px;
   margin-bottom: -30px;
   align-items: center;
 }
 
 .portfolio__galery-info{
+  
   flex-basis: calc((100% - 90px) / 3);
   justify-content: space-between;
 }
@@ -748,7 +760,7 @@ color: var(--accent-color);
 }
 .portfolio__link-galery {
   flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-right: 30px;
+ 
   margin-bottom: 30px;
   justify-content: center;
 }
@@ -840,14 +852,7 @@ color: var(--accent-color);
   padding-bottom: 60px;
 }
 
-.footer-site__logo {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-}
+
 
 .list-portfolio {
   display: inline;
@@ -989,7 +994,6 @@ color: var(--accent-color);
   letter-spacing: 0.01em;
   resize: none;
   outline: none;
-  color: rgba(117, 117, 117, 0.5);
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transition:  border-color var(--animation);
